@@ -169,18 +169,6 @@ const SettingsScreen: React.FC = () => {
           )}
         </View>
 
-        {/* Appearance Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Внешний вид</Text>
-
-          <View style={styles.settingCard}>
-            <View style={styles.settingInfo}>
-              <Text style={styles.settingLabel}>Акцентный цвет</Text>
-              <Text style={styles.settingSubtext}>Скоро будет доступно</Text>
-            </View>
-            <View style={styles.colorPreview} />
-          </View>
-        </View>
 
         {/* About Section */}
         <View style={styles.section}>
@@ -315,14 +303,6 @@ const styles = StyleSheet.create({
     ...typography.body,
     color: '#FFFFFF',
     fontWeight: '600',
-  },
-  colorPreview: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: colors.ui.success,
-    borderWidth: 2,
-    borderColor: colors.border,
   },
   datePickerModal: {
     backgroundColor: colors.surface,
