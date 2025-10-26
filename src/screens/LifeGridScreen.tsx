@@ -218,19 +218,26 @@ const LifeGridScreen: React.FC = () => {
         </TouchableOpacity>
 
         {/* Stats */}
-        <View style={styles.stats}>
-          <View style={styles.statCard}>
-            <Text style={styles.statNumber}>
-              {weeksSinceBirth - 1}
+        <View style={styles.statCard}>
+          <Text style={styles.statNumber}>
+            {weeksSinceBirth - 1}
+          </Text>
+          <Text style={styles.statLabel}>Weeks Lived</Text>
+        </View>
+
+        {/* Quick Todo for Current Week */}
+        <View style={styles.todoSection}>
+          <Text style={styles.todoTitle}>This Week</Text>
+          <TouchableOpacity
+            style={styles.todoCard}
+            onPress={() => navigation.navigate('CurrentWeek')}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.todoText}>
+              What do you want to accomplish this week?
             </Text>
-            <Text style={styles.statLabel}>Weeks Lived</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statNumber}>
-              {MAX_AGE_YEARS * WEEKS_PER_YEAR - weeksSinceBirth + 1}
-            </Text>
-            <Text style={styles.statLabel}>Weeks Remaining</Text>
-          </View>
+            <Text style={styles.todoArrow}>→</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
 
@@ -417,18 +424,13 @@ const styles = StyleSheet.create({
     shadowRadius: 1,
     elevation: 1,
   },
-  stats: {
-    flexDirection: 'row',
-    gap: spacing.lg,
-    marginTop: spacing.xxl,
-  },
   statCard: {
-    flex: 1,
     backgroundColor: colors.surface,
     borderRadius: 20,
     padding: spacing.xl,
     alignItems: 'center',
     borderWidth: 0,
+    marginTop: spacing.xxl,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -496,6 +498,45 @@ const styles = StyleSheet.create({
     paddingHorizontal: GRID_PADDING,
     paddingTop: spacing.lg,
     paddingBottom: spacing.xxl,
+  },
+  // Todo section styles
+  todoSection: {
+    marginTop: spacing.xl,
+  },
+  todoTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: colors.primaryText,
+    marginBottom: spacing.md,
+  },
+  todoCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 20,
+    padding: spacing.xl,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 2,
+  },
+  todoText: {
+    fontSize: 17,
+    color: colors.secondaryText,
+    flex: 1,
+    lineHeight: 24,
+  },
+  todoArrow: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: colors.ui.success,
+    marginLeft: spacing.md,
   },
 });
 
