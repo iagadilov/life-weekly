@@ -96,3 +96,10 @@ export const isValidDate = (dateString: string): boolean => {
   const date = new Date(dateString);
   return date instanceof Date && !isNaN(date.getTime());
 };
+
+/**
+ * Format a date for display (e.g., "January 1, 1990")
+ */
+export const formatDate = (date: Date): string => {
+  return format(date, 'MMMM d, yyyy');
+};

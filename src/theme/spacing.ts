@@ -5,9 +5,9 @@
 
 export const spacing = {
   xs: 4,    // Extra small - minimal gaps
-  s: 8,     // Small - compact spacing
-  m: 16,    // Medium - default spacing
-  l: 24,    // Large - section spacing
+  sm: 8,    // Small - compact spacing
+  md: 16,   // Medium - default spacing
+  lg: 24,   // Large - section spacing
   xl: 32,   // Extra large - screen padding
   xxl: 48,  // Extra extra large - major sections
 } as const;

@@ -12,7 +12,7 @@ export const CONFIG = {
   DAYS_PER_WEEK: 7,
 
   // Defaults
-  DEFAULT_LIFE_EXPECTANCY: 80,
+  DEFAULT_LIFE_EXPECTANCY: 90,
   MIN_LIFE_EXPECTANCY: 60,
   MAX_LIFE_EXPECTANCY: 100,
   MIN_BIRTH_YEAR: 1900,
@@ -34,5 +34,10 @@ export const CONFIG = {
     ENABLED_BY_DEFAULT: true,
   },
 } as const;
+
+// Export commonly used constants for convenience
+export const WEEKS_PER_YEAR = CONFIG.WEEKS_PER_YEAR;
+export const MAX_AGE_YEARS = CONFIG.DEFAULT_LIFE_EXPECTANCY;
+export const DEFAULT_LIFE_EXPECTANCY = CONFIG.DEFAULT_LIFE_EXPECTANCY;
 
 export default CONFIG;

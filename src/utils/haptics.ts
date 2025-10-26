@@ -71,4 +71,36 @@ export const haptics = {
   error: notificationError,
 } as const;
 
+// Type for haptic feedback types
+export type HapticType = 'light' | 'medium' | 'heavy' | 'selection' | 'success' | 'warning' | 'error';
+
+/**
+ * Trigger haptic feedback by type
+ */
+export const triggerHaptic = (type: HapticType): void => {
+  switch (type) {
+    case 'light':
+      lightImpact();
+      break;
+    case 'medium':
+      mediumImpact();
+      break;
+    case 'heavy':
+      heavyImpact();
+      break;
+    case 'selection':
+      selection();
+      break;
+    case 'success':
+      notificationSuccess();
+      break;
+    case 'warning':
+      notificationWarning();
+      break;
+    case 'error':
+      notificationError();
+      break;
+  }
+};
+
 export default haptics;

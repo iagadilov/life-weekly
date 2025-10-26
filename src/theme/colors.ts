@@ -20,9 +20,9 @@ export const accents = {
 
 // Week states - for grid visualization
 export const weekStates = {
-  past: '#D1D1D6',          // Gray for lived weeks
-  current: accents.blue,    // Default accent, changes based on user preference
-  future: '#F2F2F7',        // Very light gray for future weeks
+  past: '#34C759',          // iOS green for completed weeks
+  current: '#A8E6CF',       // Light green for current week
+  future: '#E8E8ED',        // Light gray for future weeks
 } as const;
 
 // UI elements - borders, cards, separators
@@ -47,7 +47,11 @@ export const colors = {
   ...base,
   accents,
   weekStates,
+  weekColors: weekStates, // Alias for convenience
   ui,
+  // Additional convenient aliases
+  border: ui.border,
+  surface: ui.cardBackground,
 } as const;
 
 export default colors;

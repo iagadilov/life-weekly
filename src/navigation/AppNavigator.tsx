@@ -11,43 +11,12 @@ import { RootStackParamList } from './types';
 import { useApp } from '../context/AppContext';
 import { colors, typography } from '../theme';
 
-// Import screens (placeholder imports - we'll create these screens later)
-// import OnboardingScreen from '../screens/OnboardingScreen';
-// import LifeGridScreen from '../screens/LifeGridScreen';
-// import WeekDetailScreen from '../screens/WeekDetailScreen';
-// import CurrentWeekScreen from '../screens/CurrentWeekScreen';
-// import SettingsScreen from '../screens/SettingsScreen';
-
-// Temporary placeholder components
-const OnboardingScreen = () => (
-  <View style={styles.placeholder}>
-    <Text style={styles.placeholderText}>Onboarding Screen</Text>
-  </View>
-);
-
-const LifeGridScreen = () => (
-  <View style={styles.placeholder}>
-    <Text style={styles.placeholderText}>Life Grid Screen</Text>
-  </View>
-);
-
-const WeekDetailScreen = () => (
-  <View style={styles.placeholder}>
-    <Text style={styles.placeholderText}>Week Detail Screen</Text>
-  </View>
-);
-
-const CurrentWeekScreen = () => (
-  <View style={styles.placeholder}>
-    <Text style={styles.placeholderText}>Current Week Screen</Text>
-  </View>
-);
-
-const SettingsScreen = () => (
-  <View style={styles.placeholder}>
-    <Text style={styles.placeholderText}>Settings Screen</Text>
-  </View>
-);
+// Import screens
+import OnboardingScreen from '../screens/OnboardingScreen';
+import LifeGridScreen from '../screens/LifeGridScreen';
+import CurrentWeekScreen from '../screens/CurrentWeekScreen';
+import WeekDetailScreen from '../screens/WeekDetailScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 // Create stack navigator
 const Stack = createStackNavigator<RootStackParamList>();
@@ -134,16 +103,6 @@ const styles = StyleSheet.create({
     ...typography.body,
     color: colors.secondaryText,
     marginTop: 16,
-  },
-  placeholder: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: colors.background,
-  },
-  placeholderText: {
-    ...typography.h2,
-    color: colors.primaryText,
   },
 });
 

@@ -192,6 +192,10 @@ export const getAgeInYears = (birthDate: Date): number => {
   return Math.floor(ageInWeeks / CONSTANTS.WEEKS_PER_YEAR);
 };
 
+// Alias functions for backwards compatibility
+export const calculateWeeksSinceBirth = getWeeksSinceBirth;
+export const calculateAge = getAgeInYears;
+
 /**
  * Get progress percentage of life lived
  */
