@@ -65,24 +65,24 @@ const OnboardingScreen: React.FC = () => {
         <View style={styles.header}>
           <Text style={styles.title}>Life Weeks</Text>
           <Text style={styles.subtitle}>
-            Visualize your life in weeks and make every week count
+            Визуализируйте свою жизнь по неделям и цените каждую неделю
           </Text>
         </View>
 
         {/* Info Card */}
         <View style={styles.infoCard}>
           <Text style={styles.infoText}>
-            If you live to 90 years old, you have approximately{' '}
-            <Text style={styles.infoHighlight}>4,680 weeks</Text> in your life.
+            Если вы проживете 90 лет, то у вас будет примерно{' '}
+            <Text style={styles.infoHighlight}>4 680 недель</Text> жизни.
           </Text>
           <Text style={[styles.infoText, styles.infoTextSecondary]}>
-            Let's see how many you've lived so far.
+            Давайте посмотрим, сколько вы уже прожили.
           </Text>
         </View>
 
         {/* Date Input */}
         <View style={styles.inputSection}>
-          <Text style={styles.label}>When were you born?</Text>
+          <Text style={styles.label}>Когда вы родились?</Text>
 
           <TouchableOpacity
             style={styles.dateButton}
@@ -117,12 +117,12 @@ const OnboardingScreen: React.FC = () => {
           onPress={handleContinue}
           activeOpacity={0.8}
         >
-          <Text style={styles.continueButtonText}>Continue</Text>
+          <Text style={styles.continueButtonText}>Продолжить</Text>
         </TouchableOpacity>
 
         {/* Footer */}
         <Text style={styles.footer}>
-          Your data is stored locally on your device
+          Ваши данные хранятся локально на вашем устройстве
         </Text>
       </ScrollView>
     </KeyboardAvoidingView>

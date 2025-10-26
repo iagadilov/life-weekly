@@ -72,19 +72,19 @@ const WeekDetailScreen: React.FC = () => {
   const getStatusInfo = () => {
     if (weekInfo.isPast) {
       return {
-        label: 'Past Week',
+        label: 'Прошедшая неделя',
         emoji: '✅',
         color: colors.weekColors.past,
       };
     } else if (weekInfo.isFuture) {
       return {
-        label: 'Future Week',
+        label: 'Будущая неделя',
         emoji: '🔮',
         color: colors.weekColors.future,
       };
     } else {
       return {
-        label: 'Current Week',
+        label: 'Текущая неделя',
         emoji: '⭐',
         color: colors.weekColors.current,
       };
@@ -104,7 +104,7 @@ const WeekDetailScreen: React.FC = () => {
         >
           <Text style={styles.closeButtonText}>✕</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Week Details</Text>
+        <Text style={styles.headerTitle}>Детали недели</Text>
         <View style={styles.headerSpacer} />
       </View>
 
@@ -116,37 +116,37 @@ const WeekDetailScreen: React.FC = () => {
         {/* Week Number Card */}
         <View style={[styles.weekNumberCard, { backgroundColor: status.color }]}>
           <Text style={styles.weekNumberEmoji}>{status.emoji}</Text>
-          <Text style={styles.weekNumberLabel}>Week</Text>
+          <Text style={styles.weekNumberLabel}>Неделя</Text>
           <Text style={styles.weekNumber}>{weekNumber + 1}</Text>
           <Text style={styles.weekNumberSubtitle}>{status.label}</Text>
         </View>
 
         {/* Date Range */}
         <View style={styles.infoCard}>
-          <Text style={styles.infoLabel}>Date Range</Text>
+          <Text style={styles.infoLabel}>Период</Text>
           <Text style={styles.infoValue}>{weekInfo.range}</Text>
         </View>
 
         {/* Year of Life */}
         <View style={styles.infoCard}>
-          <Text style={styles.infoLabel}>Year of Life</Text>
+          <Text style={styles.infoLabel}>Год жизни</Text>
           <Text style={styles.infoValue}>
-            Year {weekInfo.yearOfLife + 1}, Week {weekInfo.weekInYear}
+            Год {weekInfo.yearOfLife + 1}, Неделя {weekInfo.weekInYear}
           </Text>
         </View>
 
         {/* Position Info */}
         <View style={styles.statsSection}>
-          <Text style={styles.statsSectionTitle}>Timeline Position</Text>
+          <Text style={styles.statsSectionTitle}>Позиция на временной шкале</Text>
 
           <View style={styles.statsGrid}>
             <View style={styles.statItem}>
               <Text style={styles.statNumber}>{weekInfo.yearOfLife + 1}</Text>
-              <Text style={styles.statLabel}>Year</Text>
+              <Text style={styles.statLabel}>Год</Text>
             </View>
             <View style={styles.statItem}>
               <Text style={styles.statNumber}>{weekInfo.weekInYear}</Text>
-              <Text style={styles.statLabel}>Week of Year</Text>
+              <Text style={styles.statLabel}>Неделя года</Text>
             </View>
           </View>
         </View>
@@ -154,9 +154,9 @@ const WeekDetailScreen: React.FC = () => {
         {/* Notes Placeholder */}
         {weekInfo.isPast && (
           <View style={styles.notesCard}>
-            <Text style={styles.notesTitle}>Week Notes</Text>
+            <Text style={styles.notesTitle}>Заметки о неделе</Text>
             <Text style={styles.notesPlaceholder}>
-              Coming soon: Add notes and memories about this week
+              Скоро: добавьте заметки и воспоминания об этой неделе
             </Text>
           </View>
         )}
@@ -164,9 +164,9 @@ const WeekDetailScreen: React.FC = () => {
         {weekInfo.isFuture && (
           <View style={styles.futureCard}>
             <Text style={styles.futureEmoji}>🎯</Text>
-            <Text style={styles.futureTitle}>Plan Ahead</Text>
+            <Text style={styles.futureTitle}>Планирование</Text>
             <Text style={styles.futurePlaceholder}>
-              Coming soon: Set goals and plans for future weeks
+              Скоро: установите цели и планы для будущих недель
             </Text>
           </View>
         )}

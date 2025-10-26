@@ -146,9 +146,9 @@ const LifeGridScreen: React.FC = () => {
       {/* Header */}
       <View style={styles.header}>
         <View>
-          <Text style={styles.headerTitle}>Your Life in Weeks</Text>
+          <Text style={styles.headerTitle}>Ваша жизнь в неделях</Text>
           <Text style={styles.headerSubtitle}>
-            Age: {age} • Week: {weeksSinceBirth} of {MAX_AGE_YEARS * WEEKS_PER_YEAR}
+            Возраст: {age} • Неделя: {weeksSinceBirth} из {MAX_AGE_YEARS * WEEKS_PER_YEAR}
           </Text>
         </View>
         <TouchableOpacity
@@ -168,7 +168,7 @@ const LifeGridScreen: React.FC = () => {
               { backgroundColor: colors.weekColors.past },
             ]}
           />
-          <Text style={styles.legendText}>Past</Text>
+          <Text style={styles.legendText}>Прошлое</Text>
         </View>
         <View style={styles.legendItem}>
           <View
@@ -177,7 +177,7 @@ const LifeGridScreen: React.FC = () => {
               { backgroundColor: colors.weekColors.current },
             ]}
           />
-          <Text style={styles.legendText}>Current</Text>
+          <Text style={styles.legendText}>Текущая</Text>
         </View>
         <View style={styles.legendItem}>
           <View
@@ -186,7 +186,7 @@ const LifeGridScreen: React.FC = () => {
               { backgroundColor: colors.weekColors.future },
             ]}
           />
-          <Text style={styles.legendText}>Future</Text>
+          <Text style={styles.legendText}>Будущее</Text>
         </View>
       </View>
 
@@ -210,7 +210,7 @@ const LifeGridScreen: React.FC = () => {
           activeOpacity={0.7}
         >
           <Text style={styles.expandButtonText}>
-            View Full Grid
+            Посмотреть всю сетку
           </Text>
           <Text style={styles.expandButtonIcon}>
             →
@@ -222,19 +222,19 @@ const LifeGridScreen: React.FC = () => {
           <Text style={styles.statNumber}>
             {weeksSinceBirth - 1}
           </Text>
-          <Text style={styles.statLabel}>Weeks Lived</Text>
+          <Text style={styles.statLabel}>Прожитых недель</Text>
         </View>
 
         {/* Quick Todo for Current Week */}
         <View style={styles.todoSection}>
-          <Text style={styles.todoTitle}>This Week</Text>
+          <Text style={styles.todoTitle}>Эта неделя</Text>
           <TouchableOpacity
             style={styles.todoCard}
             onPress={() => navigation.navigate('CurrentWeek')}
             activeOpacity={0.7}
           >
             <Text style={styles.todoText}>
-              What do you want to accomplish this week?
+              Чего вы хотите достичь на этой неделе?
             </Text>
             <Text style={styles.todoArrow}>→</Text>
           </TouchableOpacity>
@@ -252,9 +252,9 @@ const LifeGridScreen: React.FC = () => {
           {/* Modal Header */}
           <View style={styles.modalHeader}>
             <View>
-              <Text style={styles.modalTitle}>Your Life in Weeks</Text>
+              <Text style={styles.modalTitle}>Ваша жизнь в неделях</Text>
               <Text style={styles.modalSubtitle}>
-                All {MAX_AGE_YEARS * WEEKS_PER_YEAR} weeks
+                Все {MAX_AGE_YEARS * WEEKS_PER_YEAR} недель
               </Text>
             </View>
             <TouchableOpacity

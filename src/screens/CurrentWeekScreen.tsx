@@ -62,7 +62,7 @@ const CurrentWeekScreen: React.FC = () => {
         >
           <Text style={styles.closeButtonText}>✕</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Current Week</Text>
+        <Text style={styles.headerTitle}>Текущая неделя</Text>
         <View style={styles.headerSpacer} />
       </View>
 
@@ -73,56 +73,56 @@ const CurrentWeekScreen: React.FC = () => {
       >
         {/* Week Number */}
         <View style={styles.weekNumberCard}>
-          <Text style={styles.weekNumberLabel}>Week</Text>
+          <Text style={styles.weekNumberLabel}>Неделя</Text>
           <Text style={styles.weekNumber}>{currentWeekNumber}</Text>
-          <Text style={styles.weekNumberSubtitle}>of your life</Text>
+          <Text style={styles.weekNumberSubtitle}>вашей жизни</Text>
         </View>
 
         {/* Date Range */}
         <View style={styles.infoCard}>
-          <Text style={styles.infoLabel}>Date Range</Text>
+          <Text style={styles.infoLabel}>Период</Text>
           <Text style={styles.infoValue}>{weekRange}</Text>
         </View>
 
         {/* Age */}
         <View style={styles.infoCard}>
-          <Text style={styles.infoLabel}>Your Age</Text>
-          <Text style={styles.infoValue}>{age} years old</Text>
+          <Text style={styles.infoLabel}>Ваш возраст</Text>
+          <Text style={styles.infoValue}>{age} лет</Text>
         </View>
 
         {/* Quote/Motivation */}
         <View style={styles.quoteCard}>
           <Text style={styles.quoteIcon}>💭</Text>
           <Text style={styles.quoteText}>
-            "The days are long, but the years are short. Make this week count."
+            "Дни длинные, но годы короткие. Сделайте эту неделю значимой."
           </Text>
         </View>
 
         {/* Stats */}
         <View style={styles.statsSection}>
-          <Text style={styles.statsSectionTitle}>This Week</Text>
+          <Text style={styles.statsSectionTitle}>Эта неделя</Text>
 
           <View style={styles.statsGrid}>
             <View style={styles.statItem}>
               <Text style={styles.statNumber}>7</Text>
-              <Text style={styles.statLabel}>Days</Text>
+              <Text style={styles.statLabel}>Дней</Text>
             </View>
             <View style={styles.statItem}>
               <Text style={styles.statNumber}>168</Text>
-              <Text style={styles.statLabel}>Hours</Text>
+              <Text style={styles.statLabel}>Часов</Text>
             </View>
             <View style={styles.statItem}>
-              <Text style={styles.statNumber}>10,080</Text>
-              <Text style={styles.statLabel}>Minutes</Text>
+              <Text style={styles.statNumber}>10 080</Text>
+              <Text style={styles.statLabel}>Минут</Text>
             </View>
           </View>
         </View>
 
         {/* Reflection Placeholder */}
         <View style={styles.reflectionCard}>
-          <Text style={styles.reflectionTitle}>Week Reflection</Text>
+          <Text style={styles.reflectionTitle}>Размышления о неделе</Text>
           <Text style={styles.reflectionPlaceholder}>
-            Coming soon: Add notes and reflections about your week
+            Скоро: добавьте заметки и размышления о вашей неделе
           </Text>
         </View>
       </ScrollView>
