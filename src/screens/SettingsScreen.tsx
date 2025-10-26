@@ -28,7 +28,7 @@ type NavigationProp = StackNavigationProp<RootStackParamList, 'Settings'>;
 
 const SettingsScreen: React.FC = () => {
   const navigation = useNavigation<NavigationProp>();
-  const { userProfile, updateUserProfile, clearUserData } = useApp();
+  const { userProfile, updateUserProfile, clearAllData } = useApp();
 
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [tempBirthdate, setTempBirthdate] = useState<Date>(() => {
@@ -87,7 +87,7 @@ const SettingsScreen: React.FC = () => {
           style: 'destructive',
           onPress: async () => {
             triggerHaptic('success');
-            await clearUserData();
+            await clearAllData();
           },
         },
       ]
